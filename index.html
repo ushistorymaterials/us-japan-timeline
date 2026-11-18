@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>U.S.–Japan Relations: 1930–1941</title>
+<style>
+:root{font-family:Arial,Helvetica,sans-serif;color:#202b3a;background:#fff}*{box-sizing:border-box}body{margin:0;padding:22px}.wrap{max-width:850px;margin:auto}h1{font-size:clamp(24px,4vw,36px);margin:0 0 8px}.intro{color:#5c6674;line-height:1.5}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0}.filters button{border:1px solid #cdd4dc;background:#fff;border-radius:22px;padding:10px 13px;cursor:pointer;font-weight:600;color:#29384b}.filters button.active{background:#24344b;color:white}.legend{display:flex;overflow:hidden;height:11px;border-radius:8px;margin:10px 0}.legend span:nth-child(1){background:#33856d;flex:1}.legend span:nth-child(2){background:#b58b37;flex:3}.legend span:nth-child(3){background:#d27540;flex:4}.legend span:nth-child(4){background:#b74c4c;flex:2}.scale{display:flex;justify-content:space-between;color:#5c6674;font-size:13px}.timeline{margin-top:24px}.event{display:grid;grid-template-columns:24px 1fr;gap:16px}.track{display:flex;align-items:center;flex-direction:column}.dot{width:17px;height:17px;border:5px solid var(--stage);border-radius:50%;flex:none}.line{width:2px;background:#dbe1e7;flex:1;min-height:20px}.event:last-child .line{display:none}.event-content{padding-bottom:28px;min-width:0}.date{font-size:13px;color:#657084;font-weight:700}.stage{font-size:12px;font-weight:bold;color:var(--stage);float:right;margin-left:8px}.event summary{font-size:18px;font-weight:700;cursor:pointer;margin:8px 0;line-height:1.35}.event details p{line-height:1.6;margin:8px 0 12px}.source{color:#185bb0;text-underline-offset:3px}.takeaway{border:1px solid #d7dfe7;background:#f7f9fb;padding:20px;border-radius:14px;line-height:1.6;margin:12px 0 25px}.takeaway h2{font-size:19px;margin:0 0 6px}.takeaway p{margin:0}.note{font-size:12px;color:#657084}.hidden{display:none}@media(max-width:550px){body{padding:15px}.stage{float:none;display:block;margin:5px 0}.event{gap:10px}.filters button{font-size:12px;padding:8px 10px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<h1>U.S.–Japan Relations: From Cooperation to Pearl Harbor, 1930–1941</h1>
+<p class="intro">Explore how diplomatic cooperation gave way to territorial conflict, economic pressure, and war. Select a historical stage to filter the timeline. Click an event to read its explanation and source.</p>
+<nav class="filters" aria-label="Filter timeline by stage">
+<button type="button" data-filter="all" class="active" aria-pressed="true">All events</button>
+<button type="button" data-filter="0" aria-pressed="false">Cooperation</button>
+<button type="button" data-filter="1" aria-pressed="false">Rising tensions</button>
+<button type="button" data-filter="2" aria-pressed="false">Economic confrontation</button>
+<button type="button" data-filter="3" aria-pressed="false">War</button>
+</nav>
+<div class="scale"><span>1930</span><span>1941</span></div><div class="legend" aria-label="From cooperation to war"><span></span><span></span><span></span><span></span></div>
+<section id="timeline" class="timeline" aria-label="Historical events"></section>
+<section class="takeaway"><h2>The central connection</h2><p>Japan’s territorial expansion brought increasing U.S. economic pressure. Rather than abandon their conquests, Japan’s leaders chose to widen the war, culminating in the attack on Pearl Harbor on December 7, 1941.</p></section>
+<p class="note">Sources are linked within each event. The timeline is a concise educational overview.</p>
+</main>
+<script>
+const stages=[{name:'Cooperation',color:'#33856d'},{name:'Rising tensions',color:'#b58b37'},{name:'Economic confrontation',color:'#d27540'},{name:'War',color:'#b74c4c'}];
+const events=[
+{date:'1930',title:'Naval cooperation',stage:0,description:'The United States and Japan sign the London Naval Treaty, agreeing to limits on their navies to reduce competition and the risk of war.',source:'https://history.state.gov/milestones/1921-1936/london-naval-conf'},
+{date:'September 1931',title:'Japan invades Manchuria',stage:1,description:'Japan’s army seizes territory in northeastern China. Its expansion challenges Chinese independence and increases tensions with the United States.',source:'https://history.army.mil/portals/143/Images/Publications/catalog/9-1.pdf'},
+{date:'January 1932',title:'United States rejects Japan’s conquests',stage:1,description:'Under the Stimson Doctrine, the United States refuses to recognize territorial changes achieved through aggression. This diplomatic response does not stop Japan’s expansion.',source:'https://history.army.mil/portals/143/Images/Publications/catalog/9-1.pdf'},
+{date:'July 1937',title:'Japan expands its war in China',stage:1,description:'Fighting escalates into a full-scale war. The United States opposes Japanese aggression, but continues supplying Japan with important materials, including oil and steel.',source:'https://history.state.gov/milestones/1937-1945/pearl-harbor'},
+{date:'July 1939–January 1940',title:'Trade protections end',stage:2,description:'The United States announces it will terminate its trade treaty with Japan. The treaty expires six months later, clearing the way for stronger restrictions on trade.',source:'https://history.state.gov/historicaldocuments/frus1939v03/d530'},
+{date:'1940',title:'Expansion and economic pressure',stage:2,description:'Japan moves troops into northern French Indochina and joins Germany and Italy in the Tripartite Pact. The United States restricts scrap iron exports and increases assistance to China.',source:'https://www.govinfo.gov/content/pkg/GOVPUB-S20-PURL-gpo39912/pdf/GOVPUB-S20-PURL-gpo39912.pdf'},
+{date:'July–August 1941',title:'Oil supplies are cut off',stage:2,description:'As Japan moves into southern French Indochina, the United States freezes Japanese assets. Trade restrictions effectively halt American oil exports to Japan, threatening the fuel supply needed for its military and empire.',source:'https://www.govinfo.gov/content/pkg/GOVPUB-S20-PURL-gpo39912/pdf/GOVPUB-S20-PURL-gpo39912.pdf'},
+{date:'Fall 1941',title:'Negotiations reach a deadlock',stage:2,description:'The United States seeks a Japanese withdrawal from China; Japan’s military leaders refuse to abandon their conquests. Japanese leaders increasingly consider war to secure resources in Southeast Asia.',source:'https://history.state.gov/milestones/1937-1945/pearl-harbor'},
+{date:'November 26, 1941',title:'Final diplomatic proposals fail',stage:3,description:'Secretary of State Cordell Hull presents terms calling for Japanese withdrawal from China and Indochina. Japan’s carrier strike force also departs for Hawaii as diplomatic efforts continue.',source:'https://www.fdrlibrary.org/documents/356632/390886/7.1%2BFDR%2Band%2BPearl%2BHarbor%2BFINAL%2B12-4-14.pdf/ee1fde07-461d-4708-956b-8b920bac998e'},
+{date:'December 7, 1941',title:'Japan attacks Pearl Harbor',stage:3,description:'Japanese aircraft strike the U.S. naval base in Hawaii. Japan’s leaders hope to cripple the Pacific Fleet so it cannot interfere with their conquests in Southeast Asia. The United States declares war the following day.',source:'https://www.nps.gov/wwii/learn/historyculture/pearl-harbor.htm'}
+];
+const timeline=document.getElementById('timeline');
+function render(filter='all'){
+ timeline.replaceChildren();
+ events.filter(e=>filter==='all'||String(e.stage)===filter).forEach(e=>{
+  const article=document.createElement('article');article.className='event';article.style.setProperty('--stage',stages[e.stage].color);
+  const track=document.createElement('div');track.className='track';track.innerHTML='<span class="dot"></span><span class="line"></span>';
+  const content=document.createElement('div');content.className='event-content';
+  const date=document.createElement('div');date.className='date';date.textContent=e.date;
+  const stage=document.createElement('span');stage.className='stage';stage.textContent=stages[e.stage].name;
+  const details=document.createElement('details');const summary=document.createElement('summary');summary.textContent=e.title;
+  const p=document.createElement('p');p.textContent=e.description;
+  const a=document.createElement('a');a.className='source';a.href=e.source;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Read historical source ↗';
+  details.append(summary,p,a);content.append(date,stage,details);article.append(track,content);timeline.append(article);
+ });
+}
+document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
+ document.querySelectorAll('[data-filter]').forEach(b=>{const selected=b===button;b.classList.toggle('active',selected);b.setAttribute('aria-pressed',String(selected));});
+ render(button.dataset.filter);
+}));
+render();
+</script>
+</body>
+</html>
